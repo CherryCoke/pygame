@@ -1,0 +1,212 @@
+########################
+### ----- Test ----- ###
+###    21 Jul 2014   ###
+###					 ###
+########################
+
+- Blank pygame template created.
+- Basic folder structure created.
+
+
+#################################
+### ----- Version 0.0.1 ----- ### 
+###        22 Jul 2014		  ###
+###							  ###
+#################################
+
+- Functionality to load images from spritesheets added.
+- Added test function to place images randomly on screen
+	from a spritesheet.
+- Temporary spritesheet image added.
+
+
+#################################
+### ----- Version 0.0.2 ----- ###
+###        24 Jul 2014        ###
+###							  ###
+#################################
+
+-Removed spritesheet test.
+
+-Added temporary function to load and blit images from spritesheet
+	by referencing a "level#.dat" file
+
+-Cleaned up some code/re-named some variables.
+
+
+#################################
+### ----- Version 0.0.3 ----- ###
+###        25 Jul 2014        ###
+###							  ###
+#################################
+
+-Transfered tile class and functions to game.py
+	Tile class more or less performs the same function as the
+	spritesheet.py file, so at the moment spritesheet.py is redundant.
+
+-Added a player sprite that detects tiles. Player cannot
+	"hit" or collide with tiles in this build.
+
+-Added event handling to control player movement with arrow keys.
+
+
+#################################
+### ----- Version 0.0.4 ----- ###
+###        25 Jul 2014	      ###
+###							  ###
+#################################
+
+-Added the ability to add both "tiles" and "walls" to differentiate 
+	surfaces the player is allowed to walk on and not.
+	
+- Changed level1.dat to serve for testing/debugging purposes.
+
+-Re-organized the changelog to make it look (and hopefully read) better
+
+-FIXED code that references "level#.dat" file and blits spritesheet images.
+	It was mis-reading the code quite badly, and was not bliting images
+	on the proper line. This was caused by bad indentation in for loop.
+	Also I had the x and y axis reversed in the function.
+
+- Re-arranged a lot of the game.py "to make more sense" (to me anyway)
+	Along with this re-paired a lot of redundancy in code
+
+- Added a lot of comments to code/removed "old" ones that no longer apply
+
+- Removed redundant/non-applicable ".py" files. Includes:
+	-spritesheet.py
+	-tile.py (may re-add later)
+	-level.py (may re-add later)
+
+- Feel good about being productive for once. Who knew it I had it in me?
+
+
+#################################
+### ----- Version 0.0.5 ----- ###
+###        01 Aug 2014	      ###
+###							  ###
+#################################
+
+- Edited "loadTile" function in several ways
+	-Removed all "magic numbers"
+	-Added the ability to choose which spritesheet file tiles are loaded from
+	
+- Externally searched for/added Sprites for potential future use.
+
+
+#################################
+### ----- Version 0.0.6 ----- ###
+###        13 Aug 2014	      ###
+###							  ###
+#################################
+
+- Added a "tile_reference.txt" to quickly check which characters correspond to
+	wall/tile images.
+
+- Edited game.py to start/run from a "game class"
+	- Should make it easier to interact with classes in different files
+
+- Re-arranged game.py (again) to make more sense with ^ change
+	- Also helped re-familiarize myself after a somewhat long break.
+
+- Externally refined/cut down the massive number of resources to those
+	that are most likely to be used later
+
+	
+#################################
+### ----- Version 0.0.7 ----- ###
+###        15 Aug 2014	      ###
+###							  ###
+#################################
+
+- Project moved to its own PyDev workspace in Eclipse for development
+
+- Removed tiles.py
+
+- Removed old files in Github repo as well to avoid confusion
+
+- Controls are now handled by their own function
+	- This means all levels are locked to the same control scheme
+		unless manually overwritten for a specific level
+
+- Added level0 and level2.py's to the project, though both are not in their final
+	stage, but used for testing
+	- Level0 will eventually be the main menu/welcome screen.
+
+- Added the ability to check player sprite coordinates by pressing the "A" key
+	(likely only a temporary bind)
+	
+- Added initial support for switching between levels depending on player position
+	- Will later add the ability to switch between levels with a key bind
+
+- Probably did more but everything else wasn't important enough to be remembered
+	
+
+#################################
+### ----- Version 0.0.8 ----- ###
+###        19 Aug 2014	      ###
+###							  ###
+#################################
+
+
+- Added a main menu that is now the first screen that appears upon running the game
+	and it includes several buttons (although there is no text yet):
+		- Controls/How to Play Button
+		- Play Button (Functional w/ the test levels created previously)
+		- Tutorial Button 
+		- Credits (may change later)
+		- ***** Planning to ***** add a welcome/hello button up at the top (need asset)
+	- Upon start-up one of four temporary backgrounds appears at random 
+		- For now buttons are one color, but they will change depending on background image
+		- Temporary backgrounds will be replaced by game levels once completed
+	- Main Menu has a dedicated/independent control scheme from the rest of the game
+	- Added several assets (images) to project for use in Main Menu
+
+- Created a variable to store the version number, and make it much easier to edit
+	- Previously stored within the "main()" function
+	
+- Noticed part of the changelog's format was off (corrected)
+
+
+#################################
+### ----- Version 0.0.9 ----- ###
+###        24 Aug 2014	      ###
+###							  ###
+#################################
+
+- Reinstalled operating system on laptop, so project moved from Eclipse for Win8 to
+	Eclipse Luna for Xbuntu. 
+	- Had to add a lot of extra "#@UndefinedVariable"'s to the controls() class
+		as a result of version differences
+		
+- Familiarized myself with GIMP Image Editor to perform a few basic tasks related to images
+	- As a result corrected some coordinates so that the test tiles coords/sizes are more
+		accurate and will look better
+	- Successfully made the background of the test spritesheet transparent
+	- Removed testSheet() from assets folder as it was redundant/useless
+
+- Added comments and/or made minor changes to
+	- loadTiles() function so that it is clear how to add spaces between tiles to create a 
+		"grid" appearance
+		- Also edited one of the values to change the referenced image
+	- levelOne() I made the comments much more clear, and changed a few variables to make
+		 more sense
+	- levelTwo() so that there are much fewer comments
+		- More or less got rid of anything already stated in levelOne()
+
+- Added a to-do/upcoming features part to the bottom/end of the changelog
+	(no it isn't centered and I can't bothered to fix it...deal with it)
+	- Noticed I'm doing the chagelog completely backward from what is considered "best 
+		practice"...also cant' be bothered to change
+
+
+          ################### Upcoming Features/ To-do ####################
+                
+- Noticed a bug in controls() where if you are holding a movement key down while a level is
+	changing, then movement in that direction will no longer be possible on the next level
+		- *Should* be able to fix by adding the ability to return "None" 
+			(will add in a later version)
+	 	- Could also be I just noticed the bug because of the transfer over to Linux
+
+- Drafted a few levels/ideas on paper for a tutorial/introduction to the game
+	- These levels will be the first thing added content-wise 	
